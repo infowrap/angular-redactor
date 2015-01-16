@@ -1,5 +1,5 @@
 'use strict';
-angular.module('app', ['ngRoute', 'angular-redactor'])
+angular.module('app', ['ngRoute', 'angular-redactor-filepicker'])
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when("/", { templateUrl: "views/main.html", controller: "RedactorDemo"})
