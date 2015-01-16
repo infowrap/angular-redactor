@@ -1,6 +1,6 @@
-angular-redactor
+angular-redactor-filepicker
 ================
-
+Fole of angular-redactor with filepicker support
 Angular Redactor is an angular directive for the Redactor editor.  http://imperavi.com/redactor/
 
 
@@ -42,7 +42,7 @@ Global Options
 ```js
 angular.module('app', ['angular-redactor'])
   .config(function(redactorOptions) {
-    redactorOptions.buttons = ['formatting', '|', 'bold', 'italic']; 
+    redactorOptions.buttons = ['formatting', '|', 'bold', 'italic'];
   });
 ```
 
