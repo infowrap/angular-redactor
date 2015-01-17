@@ -66,6 +66,8 @@ RedactorPlugins.filepicker = function() {
                         },
                         options = {
                             changeCallback: updateModel,
+                            replaceDivs: false,
+                            deniedTags: ['html', 'head', 'body', 'meta'],
                             plugins: ['filepicker'],
                             buttonSource: true
                         },
