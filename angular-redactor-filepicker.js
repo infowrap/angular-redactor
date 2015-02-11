@@ -186,12 +186,7 @@ RedactorPlugins.filepicker = function() {
                             });
                         },
                         options = {
-                            changeCallback: updateModel,
-                            replaceDivs: false,
-                            paragraphize: false,
-                            deniedTags: [],
                             plugins: ['filepicker', 'fullscreen'],
-                            buttonSource: true
                         },
                         additionalOptions = attrs.redactor ?
                             scope.$eval(attrs.redactor) : {},
