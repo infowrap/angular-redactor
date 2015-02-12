@@ -174,19 +174,19 @@ RedactorPlugins.filepicker = function() {
                 require: 'ngModel',
                 link: function(scope, element, attrs, ngModel) {
 
-                    // Expose scope var with loaded state of Redactor
+                  // Expose scope var with loaded state of Redactor
                     scope.redactorLoaded = false;
 
-                    var updateModel = function updateModel(value) {
-                            // $timeout to avoid $digest collision
-                            $timeout(function() {
-                                scope.$apply(function() {
-                                    ngModel.$setViewValue(value);
-                                });
-                            });
+                        var updateModel = function() {
+                            scope.$apply(ngModel.$setViewValue($_element.redactor('code.get')));
                         },
                         options = {
-                            changeCallback: updateModel,
+                            keyupCallback: updateModel,
+                            keydownCallback: updateModel,
+                            execCommandCallback: updateModel,
+                            autosaveCallback: updateModel,
+                            focusCallback: updateModel,
+                            blurCallback: updateModel,
                             plugins: ['filepicker', 'fullscreen'],
                             buttons: ['html', 'bold', 'italic', 'deleted', 'outdent', 'indent', 'image', 'file', 'link', 'alignment', 'horizontalrule']
                         },
