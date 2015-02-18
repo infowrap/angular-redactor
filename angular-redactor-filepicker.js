@@ -188,7 +188,8 @@ RedactorPlugins.filepicker = function() {
                             focusCallback: updateModel,
                             blurCallback: updateModel,
                             plugins: ['filepicker', 'fullscreen'],
-                            buttons: ['html', 'bold', 'italic', 'deleted', 'outdent', 'indent', 'image', 'file', 'link', 'alignment', 'horizontalrule']
+                            buttons: ['html', 'bold', 'italic', 'deleted', 'outdent', 'indent', 'image', 'file', 'link', 'alignment', 'horizontalrule'],
+                            deniedTags: ['html', 'head', 'body', 'meta', 'applet']
                         },
                         additionalOptions = attrs.redactor ?
                             scope.$eval(attrs.redactor) : {},
