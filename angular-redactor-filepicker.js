@@ -265,21 +265,29 @@ RedactorPlugins.filepicker = function() {
       this.button.setAwesome('filepicker', 'fa-image');
     },
     show: function() {
-      filepicker.pick(this.filepicker.insert, {
+      filepicker.pickAndStore({
         mimetype: 'image/*',
         container: 'modal',
+        multiple: false,
+        debug: false,
+        maxSize: 2000 * 1024 * 1024,
+        folders: false,
         services: [
           "COMPUTER",
           "IMAGE_SEARCH",
           "URL",
-          "FTP"
+          "DROPBOX",
+          "GOOGLE_DRIVE",
         ]
-      });
+      }, {
+        location:'S3',
+        path:'/',
+        access: 'public'
+      }, this.filepicker.insert);
 
     },
     insert: function(object) {
-      html = "<img src='" + object.url + "'>"
-
+      html = "<img src='" + object[0].url + "'>"
       this.insert.html(html);
 
       this.code.sync();
