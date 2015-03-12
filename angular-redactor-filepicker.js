@@ -330,7 +330,8 @@ RedactorPlugins.filepicker = function() {
                             blurCallback: updateModel,
                             plugins: ['filepicker', 'fullscreen', 'fontcolor', 'fontsize', 'fontfamily'],
                             buttons: ['html', 'formatting', 'bold', 'italic', 'underline', 'orderedlist', 'unorderedlist', 'outdent', 'indent', 'image', 'file', 'link', 'alignment', 'horizontalrule'],
-                            deniedTags: ['html', 'head', 'body', 'meta', 'applet']
+                            deniedTags: ['html', 'head', 'body', 'meta', 'applet'],
+                            replaceDivs: false
                         },
                         additionalOptions = attrs.redactor ?
                             scope.$eval(attrs.redactor) : {},
