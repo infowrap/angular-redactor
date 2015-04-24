@@ -20,25 +20,22 @@
                   // Expose scope var with loaded state of Redactor
                     scope.redactorLoaded = false;
 
-                        var updateModel = function() {
-                            scope.$apply(ngModel.$setViewValue($_element.redactor('code.get')));
-                        },
-                        options = {
-                            keyupCallback: updateModel,
-                            keydownCallback: updateModel,
-                            execCommandCallback: updateModel,
-                            autosaveCallback: updateModel,
-                            focusCallback: updateModel,
-                            blurCallback: updateModel,
-                            plugins: ['filepicker', 'fullscreen', 'fontcolor', 'fontsize', 'fontfamily'],
-                            buttons: ['html', 'formatting', 'bold', 'italic', 'underline', 'orderedlist', 'unorderedlist', 'outdent', 'indent', 'image', 'file', 'link', 'alignment', 'horizontalrule'],
-                            deniedTags: ['html', 'head', 'body', 'meta', 'applet'],
-                            replaceDivs: false
-                        },
-                        additionalOptions = attrs.redactor ?
-                            scope.$eval(attrs.redactor) : {},
-                        editor,
-                        $_element = angular.element(element);
+                    var updateModel = function() {
+                        scope.$apply(ngModel.$setViewValue($_element.redactor('code.get')));
+                    },
+                    options = {
+                        keyupCallback: updateModel,
+                        keydownCallback: updateModel,
+                        execCommandCallback: updateModel,
+                        autosaveCallback: updateModel,
+                        focusCallback: updateModel,
+                        blurCallback: updateModel,
+                        replaceDivs: false
+                    },
+                    additionalOptions = attrs.redactor ?
+                        scope.$eval(attrs.redactor) : {},
+                    editor,
+                    $_element = angular.element(element);
 
                     angular.extend(options, redactorOptions, additionalOptions);
 
