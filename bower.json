@@ -1,20 +1,21 @@
 {
-  "name": "angular-redactor-filepicker",
-  "main": "angular-redactor-filepicker.js",
-  "version": "2.4.0",
-  "homepage": "https://github.com/UseFedora/angular-redactor",
+  "name": "angular-redactor-iw",
+  "main": "angular-redactor-iw.js",
+  "version": "2.4.0infowrap",
+  "homepage": "https://github.com/infowrap/angular-redactor",
   "authors": [
     "Tyler Garlick <tjgarlick@gmail.com>",
-    "Noah Pryor <noah@noahpryor.com>"
+    "Noah Pryor <noah@noahpryor.com>",
+    "Nathan Walker <nathan.walker@infowrap.com>"
   ],
-  "description": "Directive for redactor WYSIWYG editor with filepicker",
+  "description": "Directive for redactor WYSIWYG editor for Infowrap",
   "keywords": [
     "Redactor",
     "WYSIWYG",
     "Angular",
     "Directives",
     "Html5 Editor",
-    "Filepicker"
+    "Infowrap"
   ],
   "license": "MIT",
   "ignore": [

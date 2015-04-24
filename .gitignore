@@ -1,6 +1,7 @@
 /.idea/
 bower_components
 .DS_Store
+dump.rdb
 
 
 demo/redactor
