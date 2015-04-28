@@ -11,7 +11,7 @@
     var redactorOptions = {};
     angular.module('angular-redactor-iw', [])
         .constant('redactorOptions', redactorOptions)
-        .directive('redactor', ['$timeout', function($timeout) {
+        .directive('redactor', ['$timeout', '$rootScope', function($timeout, $rootScope) {
             return {
                 restrict: 'A',
                 require: 'ngModel',
@@ -21,7 +21,9 @@
                     scope.redactorLoaded = false;
 
                     var updateModel = function() {
-                        scope.$apply(ngModel.$setViewValue($_element.redactor('code.get')));
+                        $rootScope.safeApply(function(){
+                          ngModel.$setViewValue($_element.redactor('code.get'));
+                        }); 
                     },
                     options = {
                         keyupCallback: updateModel,

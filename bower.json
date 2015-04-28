@@ -1,7 +1,7 @@
 {
   "name": "angular-redactor-iw",
   "main": "angular-redactor-iw.js",
-  "version": "2.4.01infowrap",
+  "version": "2.4.02infowrap",
   "homepage": "https://github.com/infowrap/angular-redactor",
   "authors": [
     "Tyler Garlick <tjgarlick@gmail.com>",
